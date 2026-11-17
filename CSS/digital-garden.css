@@ -1,1 +1,74 @@
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
+    position:sticky;
+    top:0;
+
+        img {
+            width:120px;
+            height:100px;
+        }
+
+        .burger-menu {
+            width:100px;
+        }
+
+        button {
+            order:-1;
+            position:relative;
+            z-index:100;
+
+            @media (min-width:38em) {
+                display:none;
+            }
+        }
+
+        nav {
+            position:fixed;
+            left:0;
+            right:0;
+            top:150px;
+            bottom:0;
+
+            translate:-100% 0%;
+            transition:translate .3s;
+
+            @media (min-width:38em) {
+                position:static;
+                translate:unset;
+                padding:0;
+                background:none;
+            }
+
+            ul {
+                list-style:none;
+                    @media (min-width:38em) {
+                        display:flex;
+                        gap:1em;
+                    }
+            }
+
+            a {
+                @media (min-width:38em) {
+                    flex-direction:column;
+                    border:none;
+                }
+
+                :last-of-type {
+                    @media (min-width:38em) {
+                        flex-direction:column;
+                    }
+                }
+            }
+        }
+
+        nav.is-open {
+            translate:0% 0%;
+        }
+}
+
+header.is-open button img {
+    content: url("../assets/cross-menu-icon.png");
+}
