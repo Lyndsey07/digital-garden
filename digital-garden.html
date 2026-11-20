@@ -12,7 +12,12 @@
 <body>
     <header>
         <a href="#"><img class="tarot-cards-logo" src="assets/tarot-cards-logo.png"></a>
-        <button aria-hidden="true"><img class="burger-menu" src="assets/burger-menu-icon.png" alt="">Menu</button>
+        <button aria-hidden="true">
+            <picture>
+                <source srcset="burger-menu-icon.png" media="(prefers-color-scheme:dark)">
+                <img class="burger-menu" src="assets/burger-menu-icon-white.png" alt="">
+            </picture>
+        Menu</button>
             <nav>
                 <ul>
                     <li><a href="#"><img src="assets/tarot-cards-logo.png" alt="shadowwork">Shadowwork</a></li>
