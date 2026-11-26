@@ -6,7 +6,7 @@ header {
     position:sticky;
     top:0;
 
-    background-color:plum;
+    background-color:rgb(221, 160, 221);
 
         img {
             width:120px;
@@ -81,5 +81,8 @@ header {
 }
 
 header.is-open button img {
-    content: url("../assets/cross-menu-icon.png");
+    content: url("/assets/cross-menu-icon-white.png");
+    @media (prefers-color-scheme:dark) {
+        content:url(/assets/cross-menu-icon.png);
+    }
 }
